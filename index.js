@@ -1,3 +1,5 @@
+/*https://github.com/Jabeso/fundstarter.git, https://evening-river-66933.herokuapp.com*/
+
 /*1A*/
 /*
 var fs = require('fs')
@@ -10,7 +12,6 @@ var requestListener = function(request, response){
 
 var server = http.createServer(requestListener);
 server.listen(port);
-console.log("Listening on port: " + port);
 */
 
 /*1B*/
@@ -33,8 +34,9 @@ var requestListener = function(request, response){
 
 var server = http.createServer(requestListener);
 server.listen(port);
-console.log("Listening on port: " + port);
 */
+
+/*Part 2*/
 var fs = require('fs')
 var http = require('http')
 var fileName = "index.html";
@@ -61,4 +63,11 @@ var requestListener = function (request, response) {
 
 var server = http.createServer(requestListener);
 server.listen(port);
-console.log('Server running on port: ', port)
+
+/*
+Part 3
+I guess the main difference between reading files is how much flexbility you have over each.
+For readFileSync, there wasn't much you could do.
+For readFile, you could handle errors.
+And then for using the buffer and read(), you had the most control over what you were doing.
+*/
