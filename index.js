@@ -38,7 +38,7 @@ console.log("Listening on port: " + port);
 var fs = require('fs')
 var http = require('http')
 var fileName = "index.html";
-var port = process.env.port || 8000
+var port = process.env.PORT || 8000
 
 var requestListener = function (request, response) { 
 	fs.exists(fileName, function(exists) {
