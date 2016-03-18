@@ -49,7 +49,7 @@ var requestListener = function (request, response) {
 
 	        fs.read(fd, buffer, 0, buffer.length, null, function(error, bytesRead, buffer) {
 	          var data = buffer.toString("utf8", 0, buffer.length);
-	          response.writeHead(200, {'Context-Type':'text/html'});
+	          response.writeHead(200);
 			  response.end(data,'utf8');
 	          fs.close(fd);
 	        });
