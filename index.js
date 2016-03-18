@@ -21,8 +21,7 @@ var port = process.env.port || 8080
 var requestListener = function(request, response){
     fs.readFile('index.html' , function(error, content){
     	if (error){
-    		response.writeHead(500);
-    		response.end();
+    		return console.log(error);
     	}else{
     		response.writeHead(200);
     		response.end(content, 'utf8');
