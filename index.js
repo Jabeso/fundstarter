@@ -2,7 +2,7 @@
 /*
 var fs = require('fs')
 var http = require('http')
-var port = process.env.port || 8080
+var port = process.env.PORT || 8080
 
 var requestListener = function(request, response){
     response.end(fs.readFileSync('index.html'), 'utf8');
@@ -17,7 +17,7 @@ console.log("Listening on port: " + port);
 /*
 var fs = require('fs')
 var http = require('http')
-var port = process.env.port || 8000
+var port = process.env.PORT || 8000
 
 var requestListener = function(request, response){
     fs.readFile('index.html' , function(error, content){
