@@ -16,11 +16,12 @@ console.log("Listening on port: " + port);
 /*1B*/
 var fs = require('fs')
 var http = require('http')
-var port = process.env.port || 8080
+var port = process.env.port || 8000
 
 var requestListener = function(request, response){
     fs.readFile('index.html' , function(error, content){
     	if (error){
+    		response.writeHead(500);
     		return console.log(error);
     	}else{
     		response.writeHead(200);
